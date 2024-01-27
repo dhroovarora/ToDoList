@@ -5,6 +5,10 @@ const {userRouter} = require("./routers/userRouter")
 dotenv.config();
 require("./db/conn.js")
 const port = process.env.port || 5000
+app.use(express.static(path.join(__dirname, "todo", "build"))); // static will tell kya what we used like css js files
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "todo", "build", "index.html")); //which ui to show which index.html file to pick
+});
 app.use(express.json()) // it is behvaing as middleware the data is coming in object and this line is converting it into json format
 app.use("/api/user",userRouter)
 app.get("/",(req,res)=> {

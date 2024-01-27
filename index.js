@@ -14,14 +14,14 @@ app.use(
         methods: ["GET","POST"]
     })
 )
+app.use(express.json()) // it is behvaing as middleware the data is coming in object and this line is converting it into json format
+app.use("/api/user",userRouter)
 app.use(express.static(path.join(__dirname, "todo", "build"))); // static will tell kya what we used like css js files
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "todo", "build", "index.html")); //which ui to show which index.html file to pick
 });
-app.use(express.json()) // it is behvaing as middleware the data is coming in object and this line is converting it into json format
-app.use("/api/user",userRouter)
 app.get("/",(req,res)=> {
-    res.send("dhroov")
+    res.send("dhroov")  
     console.log("asda")
 })
 //  listen will tell the port which port to go

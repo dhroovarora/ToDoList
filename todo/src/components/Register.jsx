@@ -26,7 +26,7 @@ export const Register = () => {
         <div>
           <label htmlFor="emailid" className="mx-4">Email ID</label>
           <input type="email" name="email" className="border-8" id="emailid" value={inputdata.email} onChange={handleChange}/>
-          {/* in htm we give paranthesis after handlechange but in jsx we dont' do that  */}
+          {/* in html we give paranthesis after handlechange but in jsx we dont' do that  */}
           <br />
         </div>
         <div>

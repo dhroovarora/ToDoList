@@ -10,7 +10,7 @@ const port = process.env.port || 5000
 app.use(
     cors({
         credentials: true,
-        origin: ["http://localhost:3000"],
+        origin: ["https://to-do-list-mg17.onrender.com","http://localhost:3000"],
         methods: ["GET","POST"]
     })
 )

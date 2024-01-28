@@ -20,7 +20,7 @@ export const Register = () => {
         <div>
           <label htmlFor="fname" className="mx-4">Full Name</label>
           <input type="text" name="fname" className="border-8" id="fname" value={inputdata.fname} onChange={handleChange}/>
-          {/* type name and className these are called as attributes/ */}
+          {/* type name ,className , value , onChange these are called as attributes/ */}
           <br />
         </div>
         <div>
